@@ -6,10 +6,13 @@ from app.communication.whatsapp.simulator import WhatsAppSimulator
 from app.config import BASE_URL, ENV, GEMINI_API_KEY, MODEL_NAME, MODEL_PROVIDER
 from app.graph.workflow import run_health_workflow
 from app.services.communication_service import CommunicationService
+from app.communication.whatsapp.webhook import router as whatsapp_router
 
 app = FastAPI(title="Multi-Agent Order Automation")
 communication_service = CommunicationService()
 
+##Whastsapp
+app.include_router(whatsapp_router) 
 
 @app.get("/")
 async def health_check():

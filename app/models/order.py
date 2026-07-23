@@ -1,5 +1,6 @@
 from datetime import datetime
 from enum import Enum
+from typing import Optional
 from pydantic import BaseModel,EmailStr,Field
 
 class OrderStatus(str,Enum):
@@ -15,7 +16,7 @@ class Order(BaseModel):
     email: EmailStr | None = None
     # address: str
     # Informations du produit
-    product: str = "Matelas"
+    product: Optional[str] = Field(default="Matelas")
 
     # Dimensions (cm)
     length: float = Field(..., gt=0)

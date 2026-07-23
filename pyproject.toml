@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "dotenv>=0.9.9",
     "fastapi>=0.139.1",
     "google-genai>=2.12.1",
     "httpx>=0.28.1",
@@ -14,7 +15,9 @@ dependencies = [
     "psycopg2-binary>=2.9.12",
     "pydantic[email]>=2.13.4",
     "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.32",
     "sqlalchemy>=2.0.51",
+    "twilio>=9.10.9",
     "uvicorn>=0.51.0",
 ]
 
